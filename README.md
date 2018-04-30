@@ -1,5 +1,5 @@
 # NegaScout-PVS-with-Principal-Variation-Reordering
-#Step One: Building a tree - What and Why.
+## Step One: Building a tree - What and Why.
 Three positive integers should be used in building trees: branching factor b, height h, and
 approximation Approx.
 A tree node should store the following information, and only that:
@@ -34,7 +34,7 @@ new search (PVS without reordering, alpha-beta with reordering etc.), the modifi
 should be reinitialised to match the originally-generated sets. This will enable you to make
 measurements of search performance which compare like with like.
 
-#Step Two: Negamax-style alpha-beta algorithm with iterative deepening
+## Step Two: Negamax-style alpha-beta algorithm with iterative deepening
 Implement a simple negamax alpha-beta algorithm, with only these enhancements:
 (a) code to count the number of static evaluations performed
 (b) code to return both a value and a principal variation
@@ -54,13 +54,13 @@ provided the return value), and the remainder is the best daughter’s own princ
 Arrange for alpha-beta to be called repeatedly with increasing depth limits, alpha= -10000,
 beta=+10000.
 
-#Step Three: Principal Variation Reordering
+## Step Three: Principal Variation Reordering
 Implement move reordering. After a search, the root node’s modifiable-daughters sequence
 should be altered so that the best-seen daughter is in first position, and is followed by other
 daughters in the order they first occurred, without repetition. The same is then to be done with its
 best-seen daughter, and so on for all elements of the root node’s principal variation.
 
-#Step Four: PVS with iterative deepening
+## Step Four: PVS with iterative deepening
 Implement the PVS algorithm, which consists in calling the alpha-beta algorithm with varying
 values for its alpha and beta, and occasionally searching a subtree a second time with different
 alpha and beta values. See the lecture notes for week 5. Embed the algorithm in a iterativedeepening
